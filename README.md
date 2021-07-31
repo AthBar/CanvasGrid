@@ -151,16 +151,10 @@ Now that we have covered all about class construction, let me show you all the p
     - A `textureInfo` object containing the background texture of the grid.
     - As `lineColor`, his should be changed using the [GridInfo](#GridInfo) class and the [ApplyInfo](#GridMethodApplyInfo) method.
   
+  ### 2: Grid.Cell class
   
   
-  
-  
-  
-  
-  
-  
-  
-  
+- ### Methods:
   - #### <code>addEventListener(<code>String: event</code>, <code>Function: listener</code>, <code>boolean: once</code>, <code>...Any: args</code>)</code>
     - <code><b>String</b> event</code>: The listener only listens if the event is `click` or `resize`. When it is set to `click`, it will be triggered when the user clicks on the canvas. When it is `resize`, it will be triggered when the Grid <a href="#GridPropSize"><code>size</code> property</a> changes.
     - <code><b>Function</b> listener</code>: The function to be run when the listener is triggered
@@ -187,3 +181,5 @@ Now that we have covered all about class construction, let me show you all the p
     >>> myG.cells[0][0].events = []; //Hard removal, if you have more than one event listeners, better use cell.events.splice()
     <<< []
     ```
+  - ### `fixPos`
+    **Description:** Fixes the position of the cell so that it refreshes when the canvas resizes. It should be binded to a Grid's 
